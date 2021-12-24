@@ -1,0 +1,12 @@
+{
+    "planets": [
+        {
+            "title": "Mars",
+            "description": "description of mars"
+        },
+        {
+            "title": "Terra",
+            "description": "description of terra"
+        }
+    ]
+}
