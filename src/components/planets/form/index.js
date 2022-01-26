@@ -1,12 +1,21 @@
 import React, { Fragment, useState } from 'react';
 
+const initAllState = {
+    title: '',
+    description: ''
+}
+
 const Form = (props) => {
-    const [title, setName] = useState('')
-    const handleChange = event => setName(event.target.value)
+    const [fields, setFields] = useState(initAllState)
+    const handleFieldsChange = event => setFields({
+        ...fields,
+        [event.currentTarget.name]: event.currentTarget.value
+    })
 
     const handleSubmit = event => {
-        props.addPlanet({title:title})
+        props.addPlanet(fields)
         event.preventDefault();
+        setFields(initAllState)
     }
 
     return (
@@ -14,7 +23,11 @@ const Form = (props) => {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Name:</label>
-                    <input id="name" type="text" value={title} onChange={handleChange}></input>
+                    <input id="name" type="text" name="title" value={fields.title} onChange={handleFieldsChange}></input>
+                </div>
+                <div>
+                    <label htmlFor="Description">Description:</label>
+                    <input id="name" type="text" name="description" value={fields.description} onChange={handleFieldsChange}></input>
                 </div>
                 <br/>
                 <input type="submit"></input>
