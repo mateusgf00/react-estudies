@@ -37,6 +37,7 @@ const Planets = () => {
                 <Planet
                     title={planet.title}
                     description={planet.description}
+                    satelite={planet.satelite}
                 />
             )}
         </div>

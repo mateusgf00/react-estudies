@@ -2,7 +2,8 @@ import React, { Fragment, useState } from 'react';
 
 const initAllState = {
     title: '',
-    description: ''
+    description: '',
+    satelite: ''
 }
 
 const Form = (props) => {
@@ -28,6 +29,10 @@ const Form = (props) => {
                 <div>
                     <label htmlFor="Description">Description:</label>
                     <input id="name" type="text" name="description" value={fields.description} onChange={handleFieldsChange}></input>
+                </div>
+                <div>
+                    <label htmlFor="Satelite">Satelite:</label>
+                    <input id="name" type="text" name="satelite" value={fields.satelite} onChange={handleFieldsChange}></input>
                 </div>
                 <br/>
                 <input type="submit"></input>

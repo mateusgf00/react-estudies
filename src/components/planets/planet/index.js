@@ -6,13 +6,7 @@ const Planet = (props) => {
             <div>
                 <h4>{props.title}</h4>
                 <p>{props.description}</p>
-            </div>
-        )
-    }else{
-        return (
-            <div>
-                <h4>{props.title}</h4>
-                <h4>{props.title}</h4>
+                <p>{props.satelite}</p>
             </div>
         )
     }
